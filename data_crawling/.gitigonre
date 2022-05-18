@@ -1,0 +1,6 @@
+springer_config.json
+elsevier_config.json
+Data/*
+grobid_client_python
+.idea
+__pycache__
