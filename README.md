@@ -5,7 +5,8 @@ Biodiversity domain language model. It is fine-tuned on 2 downstream tasks for N
 **Quick Download**
   * [BiodivBERT on Huggingface hub](https://huggingface.co/NoYo25/BiodivBERT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6554141.svg)](https://doi.org/10.5281/zenodo.6554141)
   * Pre-proccessed Datasets for Fine-tuning [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6554208.svg)](https://doi.org/10.5281/zenodo.6554208)
-  * Pre-training corpora
+  * Pre-training corpora [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6555690.svg)](https://doi.org/10.5281/zenodo.6555690)
+
 
 ## Pre-training 
 BiodivBERT Pre-training involves data crawling and pre-traing task. 
