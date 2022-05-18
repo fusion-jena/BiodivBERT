@@ -1,7 +1,11 @@
 # BiodivBERT
-BERT for Biodiversity domain including 2 downstream tasks: Named Entity Recognition (NER) and Relation Extraction (RE)
-* [BiodivBERT on Huggingface hub]()
-* [BiodivBERT Pre-trained Weights]()
+Biodiversity domain language model. It is fine-tuned on 2 downstream tasks for Named Entity Recognition (NER) and Relation Extraction (RE) using various state-of-the-art datasets.
+![STA Tasks!](images/biodivbert.png)
+
+**Quick Download**
+  * [BiodivBERT on Huggingface hub](https://huggingface.co/NoYo25/BiodivBERT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6554141.svg)](https://doi.org/10.5281/zenodo.6554141)
+  * Pre-proccessed Datasets for Fine-tuning [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6554208.svg)](https://doi.org/10.5281/zenodo.6554208)
+  * Pre-training corpora
 
 ## Pre-training 
 * Code is published under this repo \pre-training 
@@ -29,5 +33,34 @@ BERT for Biodiversity domain including 2 downstream tasks: Named Entity Recognit
   *  BioRelEx
   *  BiodivRE
 *  Same as in NER, We have fine-tuned BiodivBERT for /RE on a single TPU provided by ColabPro for few hours per dataset.
+
+### How to Use BiodivBERT
+
+1. Masked Language Model
+````buildoutcfg
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
+tokenizer = AutoTokenizer.from_pretrained("NoYo25/BiodivBERT")
+
+model = AutoModelForMaskedLM.from_pretrained("NoYo25/BiodivBERT")
+````
+
+2. Token Classification - Named Entity Recognition
+````buildoutcfg
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+
+tokenizer = AutoTokenizer.from_pretrained("NoYo25/BiodivBERT")
+
+model = AutoModelForTokenClassification.from_pretrained("NoYo25/BiodivBERT")
+````
+
+3. Sequence Classification - Relation Extraction
+````buildoutcfg
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained("NoYo25/BiodivBERT")
+
+model = AutoModelForSequenceClassification.from_pretrained("NoYo25/BiodivBERT")
+````
 
 ## Citation
